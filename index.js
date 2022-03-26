@@ -88,10 +88,7 @@ let pokemon = undefined;
 
 // Rotas
 app.get("/", (req, res) => {
-  setTimeout(() => {
-    message="";
-}, 1000);
-  res.render("index", { pokedex, pokemon });
+   res.render("index", { pokedex, pokemon });
 });
 
 app.get("/cadastro", (req, res) => {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Pokedex</title>
 </head>
 
@@ -20,11 +20,12 @@
                 </a>
             </li>
             <li><a href="cadastro">Cadastro</a> </li>
+            <li><a href="cards"></a></li>
         </ul>
     </nav>
 
     <header>
-        <img src="img/30091641838086.webp" alt="banner" >
+        <img src="/img/30091641838086.webp" alt="banner" >
     </header>
 
 
@@ -32,23 +33,30 @@
 
         <section id='cards'>
 
-            <h2>Lista de Pokemons</h2>
+            <h2>Pokemon</h2>
 
-            <% pokedex.forEach((pokemon)=> { %>
+            
                 <div class="card">
-                    <img src="<%= pokemon.imagem %>" alt="">
-                    <h3>
+
+                    <img 
+                    src="<%= pokemon.imagem %>"
+                    
+                    >
+
+                    <h2>
                         <%= pokemon.nome %>
-                    </h3>
+                    </h2>
                     <p class="descricao">
                         <%= pokemon.descricao %>
                     </p>
-                    <p>Tipo: <%= pokemon.tipo %>
+                    <p>tipo: <%= pokemon.tipo %>
+                    <p>altura: <%= pokemon.altura %> m</p>
+                    <p>peso: <%= pokemon.peso %> kg</p>
+                    <p>categoria: <%= pokemon.categoria %></p>
+                    <p>habilidade: <%= pokemon.habilidade %></p>
                     </p>
-                    <a id="editar" href="/detalhes/<%= pokemon.id %>">ver mais</a>
-                    <a id="apagar" href="/delete/<%= pokemon.id %>">Apagar</a>
                 </div>
-                <% }) %>
+                
 
         </section>
 

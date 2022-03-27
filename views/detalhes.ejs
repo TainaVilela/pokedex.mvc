@@ -35,27 +35,24 @@
             <h2>Pokemon</h2>
 
             
-                <div class="cards">
+                <div class="card">
+
+                    <img src="<%= pokemon.imagem %>" alt="pokemon.imagem">
 
                     <h2>
                         <%= pokemon.nome %>
                     </h2>
 
-                    <p class="descricao">
-                        <%= pokemon.descricao %>
-                    </p>
-                    <p>tipo: <%= pokemon.tipo %>
+                    <p class="descricao"> <%= pokemon.descricao %> </p>
+                    <p>tipo: <%= pokemon.tipo %> </p>
                     <p>altura: <%= pokemon.altura %> </p>
                     <p>peso: <%= pokemon.peso %></p>
                     <p>categoria: <%= pokemon.categoria %></p>
                     <p>habilidade: <%= pokemon.habilidade %></p>
-                    </p>
+                    
                 </div>
                 
-
         </section>
-
-
 
     </main>
 
